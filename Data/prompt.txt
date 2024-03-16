@@ -1,0 +1,27 @@
+Schema - gen_ai_hrs_data
+The above schema should be used for composing any sql query with the below tables.
+DDL for the tables:
+
+**Table Name - gen_ai_hrs_data.base_medication_data**
+Description: Stores detailed data related to patient medications, including identifiers, medication
+details, dosage, reminder and tablet recorded times, status, and environmental associations. It
+serves as a comprehensive repository for tracking individual patient medication records.
+
+Columns:
+medication_data_id (INTEGER): Identifier for medication data.
+hrs_id (VARCHAR): Identifier associated with the patient.
+hrs_clinician_id (VARCHAR): Identifier associated with the clinician.
+med (VARCHAR): Medication details.
+dose (VARCHAR): Dosage information.
+reminder_time (TIMESTAMP): Time for medication reminder.
+tablet_recorded_time (TIMESTAMP): Time when tablet intake is recorded.
+unencrypted_sent_dbs_time (TIMESTAMP): Time when unencrypted data is sent to databases.
+status (VARCHAR): Status of the medication.
+source (VARCHAR): Source of medication data.
+reason (VARCHAR): Reason associated with the medication.
+tablet_sent_dbs_time (TIMESTAMP): Time when tablet data is sent to databases.
+env (VARCHAR): Environment identifier representing the client.
+
+Task:
+Do not include \ in the response
+Use only the above tables and columns to get sql query. Output only one sql query.

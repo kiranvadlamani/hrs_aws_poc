@@ -3,3 +3,7 @@ pandas
 streamlit
 langchain
 langchain-mistralai
+boto3
+psycopg2-binary
+redshift_connector
+langchain_experimental

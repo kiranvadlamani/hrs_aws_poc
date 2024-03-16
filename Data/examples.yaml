@@ -1,0 +1,44 @@
+- answer: There are 8060 rows in the base_activity_data table.
+  input: How many rows are in the base_activity_data table?
+  sql_cmd: SELECT count(*) FROM base_activity_data;
+  sql_result: '[(8060,)]'
+  table_info: |
+    CREATE TABLE base_activity_data
+    (
+        activity_data_id integer,
+        env character varying(200),
+        reason character varying(200),
+        source character varying(200),
+        status character varying(200),
+        duration character varying(200),
+        type character varying(200),
+        hrs_clinician_id character varying(200),
+        hrs_id character varying(50),
+        tablet_sent_dbs_time timestamp without time zone,
+        unencrypted_sent_dbs_time timestamp without time zone,
+        tablet_recorded_time timestamp without time zone,
+        reminder_time timestamp without time zone
+    )
+
+    /*
+    3 rows from artists table:
+         activity_data_id                hrs_id      hrs_clinician_id  \
+    0               934  25BVkZWdImdhMXwdwE9u  T6Wmi7gnI73dUqTVFaZH   
+    1               177  wfbPsO7WZA3ZuuIVfSFD  5AoYPz9tyWJTCogIY3Rz   
+    2               204  pDIH3Q01uarSmTHCKNkF  5AoYPz9tyWJTCogIY3Rz   
+    
+                type duration       reminder_time tablet_recorded_time  \
+    0  clinician_web      111 2022-01-05 00:20:00  2022-01-05 19:16:46   
+    1  clinician_web       30 2022-05-10 00:20:00  2022-05-10 05:00:32   
+    2  clinician_web       20 2022-05-12 00:20:00  2022-05-12 13:27:52   
+    
+      unencrypted_sent_dbs_time status source                           reason  \
+    0       2022-01-05 19:16:46  added    web                                    
+    1       2022-05-10 05:00:32  added    web          New reason1652216267477   
+    2       2022-05-12 13:27:52  added    web  Add new metric reasonNghWBf1cgE   
+    
+      tablet_sent_dbs_time             env  
+    0  2022-01-05 14:16:51            Env1  
+    1  2022-05-10 01:00:32  CypressTestEnv  
+    2  2022-05-12 09:27:52  CypressTestEnv  
+    */
